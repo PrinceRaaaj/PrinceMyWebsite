@@ -1,0 +1,27 @@
+{% extends "mywebsite/base.html" %}
+{% block title %}Resume - Prince Raj{% endblock %}
+{% block link %}{% endblock %}
+{% block css %}{% endblock %}
+{% block data %}
+<section class="text-gray-500 bg-gray-900 body-font">
+    <div class="container px-5 py-5 mx-auto">
+        <div class="flex flex-col text-center w-full mb-10">
+            <h1 class="sm:text-4xl text-3xl font-medium title-font text-white">Resume</h1>
+        </div>
+        <div class="row ">
+            <center>
+                <button class="inline-flex text-white bg-orange-500 border-0 py-1 px-4 mx-5 mb-5 focus:outline-none hover:bg-gray-600 rounded text-lg">
+                    <a>Download in PDF</a>
+                </button>
+                <button class="inline-flex text-white bg-orange-500 border-0 py-1 px-4 mx-5 mb-5 focus:outline-none hover:bg-gray-600 rounded text-lg">
+                    <a>Download in Word</a>
+                </button>
+            </center>
+        </div>
+        <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+            {% load static %}
+            <iframe src = "{% static 'mywebsite/PrinceRaj.pdf' %}" style="width:800px; height:1165px;"></iframe>
+        </div>
+    </div>
+</section>
+{% endblock %}

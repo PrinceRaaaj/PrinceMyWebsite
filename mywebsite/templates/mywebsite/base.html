@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>{% block title %}{% endblock %}</title>
+    {% block link %}{% endblock %}
+    {% block css %}{% endblock %}
+    {% load static %}
+    <link href="{% static 'mywebsite/base.css' %}" rel="stylesheet">
+</head>
+<body>
+{% include "mywebsite/navbar.html" %}
+{% block data %}{% endblock %}
+{% include "mywebsite/footer.html" %}
+</body>
+</html>
